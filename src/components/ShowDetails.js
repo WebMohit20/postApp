@@ -5,11 +5,11 @@ const ShowDetails = ( {office} )=>{
 
     return (
         <div className="showDetails" >
-           <p className="name" > Name: {office.Name} </p>
-           <p className="branch" > Branch Type:  {office.BranchType} </p>
-           <p className="delivery" > Delivery Status:  {office.DeliveryStatus} </p>
-           <p className="district" > District:  {office.District} </p>
-           <p className="division" > Division:  {office.Division} </p>
+           <p className="name" > <span>Name: </span>{office.Name} </p>
+           <p className="branch" > <span>Branch Type:</span>  {office.BranchType} </p>
+           <p className="delivery" > <span>Delivery Status: </span> {office.DeliveryStatus} </p>
+           <p className="district" ><span> District: </span> {office.District} </p>
+           <p className="division" > <span>Division: </span> {office.Division} </p>
         </div>
     )
 }

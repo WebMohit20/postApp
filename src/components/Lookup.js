@@ -2,7 +2,7 @@ import React,{useState} from "react";
 
 import FetchData from "./FetchData";
 
-const Lookup = ( {setPincode} )=>{
+const Lookup = ( {setPincode ,setToggle } )=>{
     let [ code,setCode ] = useState("")
     function handlePincode(e){
         e.preventDefault();
@@ -13,6 +13,7 @@ const Lookup = ( {setPincode} )=>{
             return ;
         };
         setCode("");
+        setToggle(false);
     }
     function getCode(e){
         let value = e.target.value;
@@ -20,10 +21,10 @@ const Lookup = ( {setPincode} )=>{
         
     }
     return (
-        <div>
+        <div className="lookup" >
             <h2>Enter Pincode</h2>
             <form onSubmit={handlePincode}>
-                <input type="number" value={code} onChange={getCode}/>
+                <input type="number" placeholder="Pincode" value={code} onChange={getCode}/>
                 <button type="submit"> Lookup </button>
             </form>
             
