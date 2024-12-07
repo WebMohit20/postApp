@@ -13,7 +13,7 @@ const App = ()=>{
         <div className="appContainer" >
            { toggle && <Lookup setPincode={setPincode} setToggle={setToggle} />}
            {pincode && <FetchData  pincode={pincode} setPostOffice={setPostOffice} /> } 
-           {postOffice && <HandleDeatils postOffice={postOffice}/> }
+           {postOffice && <HandleDeatils postOffice={postOffice} pincode={pincode} /> }
         </div>
     )
 }
